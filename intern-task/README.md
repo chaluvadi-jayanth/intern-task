@@ -5,3 +5,9 @@
 - Started the scss.
 
 - After the scss, I start the vue.js.
+
+## April-20-2021
+
+- Created the vue folder with vuex module.
+
+- Started the vuex.
