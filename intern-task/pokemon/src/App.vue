@@ -24,4 +24,11 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+body{
+ background-image: url('./assets/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  
+}
 </style>

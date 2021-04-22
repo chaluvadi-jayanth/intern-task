@@ -11,3 +11,9 @@
 - Created the vue folder with vuex module.
 
 - Started the vuex.
+
+## April-21-2021
+
+- I faced few problems with my vscode and node version.
+
+- For today I fixed the problem and working fine.
