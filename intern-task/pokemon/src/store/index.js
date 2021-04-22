@@ -24,8 +24,10 @@ export default createStore({
         .then(res => res.json())
         // .then(res => console.log(res.results))
         .then(res => {
-          console.log(res.results)
-          commit("poke", res.results)
+          console.log(res)
+          commit("poke", res.results.map(data => {
+            return Object.assign(data, { editing: false });
+          }))
 
         })
       // .then(res => $state.store.pokemonarr = res.results)
