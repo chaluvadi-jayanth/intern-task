@@ -1,9 +1,9 @@
 <template>
 <main >
 
-<div>
-  <input id='name' type="text" autofocus placeholder="Name"> 
-  <input id='url' type="text" placeholder="Url">
+<div class='input-group input'> 
+  <input id='name' type="text" autofocus placeholder="Name"> &nbsp;&nbsp;&nbsp;
+  <input id='url' type="text" placeholder="Url">&nbsp;&nbsp;
   <button @click='add' class="btn btn-primary">Add</button>
   
 </div>
@@ -82,19 +82,10 @@ methods:{
           poke.url=this.url
           this.url=''
         }
-        // poke.url=this.url
-        // this.todoText = todo.title;
-        // this.updateTodo(todo);
-      } else {
-        // todo.title = this.todoText;
-        // todo.complete = this.completed;
-        // this.changeCompleted();
-      }
+        
+      } 
     },
 
-  edit(index){
-document.querySelector('.update').style.display='none'
-  },
 del(index){
   console.log(index)
 this.$store.commit('deletepoke',index)
@@ -110,9 +101,10 @@ add(){
    document.querySelector('#url').value=''
   }
 },
-
+//with the help of getters we are accessing the state data,we can also
+//acess the state data directly.
 computed: mapGetters(['pokemonarray']),
-  
+ //Calls the poke function in actions when vue is created. 
   created(){
     console.log("created")
     this.$store.dispatch('poke')
@@ -146,6 +138,9 @@ table{
 td{
   padding:10px
 }
+td:hover{
+  cursor: pointer;
+}
 th{
   color:red;
   font-size: 25px;
@@ -153,6 +148,11 @@ th{
 body{
   overflow: hidden;
 }
-
+.input{
+padding-left:30%;
+}
+.input input{
+  border-radius:9px;
+}
 
 </style>
