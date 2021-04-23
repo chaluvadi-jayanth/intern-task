@@ -5,6 +5,9 @@ export default createStore({
     pokemonarr: []
   },
   mutations: {
+    //     pokeData(state,data){
+    // state.pokemonarr
+    //     },
     poke(state, arr) {
       // console.log(arr, "data")
       state.pokemonarr = arr
@@ -17,6 +20,10 @@ export default createStore({
 
   },
   actions: {
+    // updatePokeData({commit},data){
+    //   commit('pokeData',data)
+
+    // },
     poke({ commit }) {
       fetch('https://pokeapi.co/api/v2/pokemon?limit=10', {
         method: 'GET'

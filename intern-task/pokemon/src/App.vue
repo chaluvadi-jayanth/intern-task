@@ -1,5 +1,9 @@
 <template>
- <Pokemon />
+<div class="container">
+  <h1>POKEMON</h1>
+  <Pokemon />
+</div>
+ 
 </template>
 
 <script>
